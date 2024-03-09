@@ -1,3 +1,5 @@
+//I have added functioanlity to save and load the journal to and from a JSON file.
+//Workd on a class to record mood and display the current mood. DOES NOT WORK YET
 using System;
 
 class Program
