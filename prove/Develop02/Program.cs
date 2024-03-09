@@ -11,8 +11,8 @@ class Program
         {
             Console.WriteLine("1. Write a new entry");
             Console.WriteLine("2. Display the journal");
-            Console.WriteLine("3. Save the journal to a file");
-            Console.WriteLine("4. Load the journal from a file");
+            Console.WriteLine("3. Save the journal to a JSON file");
+            Console.WriteLine("4. Load the journal from a JSON file");
             Console.WriteLine("5. Exit");
             Console.WriteLine("Enter your choice:");
 
@@ -32,10 +32,10 @@ class Program
                     journal.DisplayJournal();
                     break;
                 case 3:
-                    journal.SaveJournalToFile();
+                    journal.SaveJournalToJson("journal.json");
                     break;
                 case 4:
-                    journal.LoadJournalFromFile();
+                    journal.LoadJournalFromJson("journal.json");
                     break;
                 case 5:
                     running = false;

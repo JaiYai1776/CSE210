@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.IO;
 
 class Journal
 {
@@ -22,17 +24,31 @@ class Journal
         }
     }
 
-    public void SaveJournalToFile()
+    public void SaveJournalToJson(string filename)
     {
-        Console.WriteLine("Enter filename to save:");
-        string filename = Console.ReadLine();
-        // Code for saving journal to file
+        try
+        {
+            string json = JsonConvert.SerializeObject(entries, Formatting.Indented);
+            File.WriteAllText(filename, json);
+            Console.WriteLine("Journal saved successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error saving journal: {ex.Message}");
+        }
     }
 
-    public void LoadJournalFromFile()
+    public void LoadJournalFromJson(string filename)
     {
-        Console.WriteLine("Enter filename to load:");
-        string filename = Console.ReadLine();
-        // Code for loading journal from file
+        try
+        {
+            string json = File.ReadAllText(filename);
+            entries = JsonConvert.DeserializeObject<List<Entry>>(json);
+            Console.WriteLine("Journal loaded successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading journal: {ex.Message}");
+        }
     }
 }
