@@ -7,28 +7,28 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<Scripture> scriptures = LoadScripturesFromFile("scriptures.txt");
+        List<Scripture> _scriptures = LoadScripturesFromFile("scriptures.txt");
 
-        if (scriptures.Count == 0)
+        if (_scriptures.Count == 0)
         {
             Console.WriteLine("No scriptures found in the file.");
             return;
         }
 
-        Random random = new Random();
-        Scripture randomScripture = scriptures[random.Next(scriptures.Count)];
+        Random _random = new Random();
+        Scripture _randomScripture = _scriptures[_random.Next(_scriptures.Count)];
 
-        while (!randomScripture.AllWordsHidden())
+        while (!_randomScripture.AllWordsHidden())
         {
             Console.Clear();
-            Console.WriteLine(randomScripture.Display());
+            Console.WriteLine(_randomScripture.Display());
             Console.WriteLine("Press Enter to hide another 3 words or type 'quit' to exit.");
-            string input = Console.ReadLine();
+            string _input = Console.ReadLine();
 
-            if (input.ToLower() == "quit")
+            if (_input.ToLower() == "quit")
                 return;
 
-            randomScripture.HideRandomWords(3);
+            _randomScripture.HideRandomWords(3);
         }
 
         Console.Clear();
@@ -37,28 +37,28 @@ class Program
 
     static List<Scripture> LoadScripturesFromFile(string filePath)
     {
-        List<Scripture> scriptures = new List<Scripture>();
+        List<Scripture> _scriptures = new List<Scripture>();
 
         try
         {
-            string[] lines = File.ReadAllLines(filePath);
+            string[] _lines = File.ReadAllLines(filePath);
 
-            foreach (string line in lines)
+            foreach (string _line in _lines)
             {
-                string[] parts = line.Split(new char[] { ' ' }, 2);
-                if (parts.Length == 2)
+                string[] _parts = _line.Split(new char[] { ' ' }, 2);
+                if (_parts.Length == 2)
                 {
-                    string reference = parts[0];
-                    string text = parts[1];
-                    scriptures.Add(new Scripture(new ScriptureReference(reference), text));
+                    string _reference = _parts[0];
+                    string _text = _parts[1];
+                    _scriptures.Add(new Scripture(new ScriptureReference(_reference), _text));
                 }
             }
         }
-        catch (Exception ex)
+        catch (Exception _ex)
         {
-            Console.WriteLine($"Error loading scriptures from file: {ex.Message}");
+            Console.WriteLine($"Error loading scriptures from file: {_ex.Message}");
         }
 
-        return scriptures;
+        return _scriptures;
     }
 }

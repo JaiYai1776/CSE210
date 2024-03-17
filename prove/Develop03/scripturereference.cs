@@ -1,14 +1,14 @@
 public class ScriptureReference
 {
-    private string reference;
+    private string _reference;
 
     public ScriptureReference(string reference)
     {
-        this.reference = reference;
+        _reference = reference;
     }
 
     public override string ToString()
     {
-        return reference;
+        return _reference;
     }
 }

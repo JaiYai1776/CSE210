@@ -1,26 +1,26 @@
 public class ScriptureWord
 {
-    private string text;
-    private bool isHidden;
+    private string _text;
+    private bool _isHidden;
 
     public ScriptureWord(string text)
     {
-        this.text = text;
-        isHidden = false;
+        _text = text;
+        _isHidden = false;
     }
 
     public string Text
     {
-        get { return text; }
+        get { return _text; }
     }
 
     public bool IsHidden
     {
-        get { return isHidden; }
+        get { return _isHidden; }
     }
 
     public void Hide()
     {
-        isHidden = true;
+        _isHidden = true;
     }
 }
