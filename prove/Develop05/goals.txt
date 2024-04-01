@@ -1,0 +1,4 @@
+1225:8
+simple:Give a talk:Speak in Sacrament meeting when asked:100:0
+eternal:Study the scriptures:Study for at least 10 minutes:50:1
+checklist:Attend the temple:Attend and perform any ordinance:50:1:3:500
