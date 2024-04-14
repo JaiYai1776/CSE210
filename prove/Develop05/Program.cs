@@ -47,7 +47,21 @@ class Program
             }
         }
     }
-
+    static void SaveGoals(List<Goal> goals, List<Goal> completedGoals, string fileName)
+    {
+        int level = 0;
+        double points = 0;
+        using StreamWriter file = new StreamWriter(fileName);
+        file.WriteLine(points + ":" + level);
+        foreach (var goal in goals)
+        {
+            file.WriteLine(goal.SerializeSelf());
+        }
+        foreach (var completedGoal in CompletedGoals)
+        {
+            file.WriteLine(completedGoal.SerializeSelf());
+        }
+    }
 public static int LevelUp(int level, double points)
 {
     int newLevel = level;

@@ -1,0 +1,16 @@
+1, Quest for the Lost Sock, Penelope Mismatch,11, mystery,8.99,1.99
+2, The Adventures of Sir Quacks-a-lot, Mallard Drake,17, mystery,10.99,2.50
+3, Pancakes in Space, Syrupy Jenkins,10, mystery,12.99,3.25
+4, The Perplexing Case of the Vanishing Eyebrows, Inspector Browless,35, mystery,11.49,2.75
+5, The Secret Life of Lint, Fluffy McFuzz,18, mystery,9.49,1.75
+6, Attack of the Killer Dust Bunnies, Duster Dan,40, mystery,10.99,2.99
+7, The Great Cheese Caper, Brie Cheddarson,15, mystery,13.99,3.50
+8, Dancing with the Moon Pigeons, Luna Featherfoot,5, mystery,10.49,2.25
+9, The Misadventures of Captain Quack Sparrow, Featherbeak Jones,23, mystery,11.99,2.99
+10, The Legend of the Missing Left Sock, Cottony McSockington,30, mystery,9.99,1.99
+11, The Case of the Missing Marbles, Inspector Marble,18, mystery,12.49,3.25
+12,The Great Escape of the Dust Bunnies,Dusty Dan,22,Comedy,11.99,2.55
+13, The Great Escape of the Mischievous Marbles, Marble Mayhem,12, mystery,11.99,2.75
+14,Crepes in Space,Syrupy Jenkins,11,Adventure,13.99,2.34
+15,The Great Cheese Caper,Brie Cheddarson,12,mystery,13.99,3.51
+
